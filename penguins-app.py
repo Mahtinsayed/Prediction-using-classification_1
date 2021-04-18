@@ -5,14 +5,13 @@ import pickle
 from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
-# Penguin Prediction App
+# Earning Prediction Calculator
 
-This app predicts the **Palmer Penguin** species!
+This calculator predicts your earning with Artfictial Intelligience
 
-Data obtained from the [palmerpenguins library](https://github.com/allisonhorst/palmerpenguins) in R by Allison Horst.
-""")
 
-st.sidebar.header('User Input Features')
+
+st.sidebar.header('User financial datas ')
 
 st.sidebar.markdown("""
 [Example CSV input file](https://raw.githubusercontent.com/dataprofessor/data/master/penguins_example.csv)
@@ -24,10 +23,10 @@ if uploaded_file is not None:
     input_df = pd.read_csv(uploaded_file)
 else:
     def user_input_features():
-        island = st.sidebar.selectbox('Island',('Biscoe','Dream','Torgersen'))
-        sex = st.sidebar.selectbox('Sex',('male','female'))
-        bill_length_mm = st.sidebar.slider('Bill length (mm)', 32.1,59.6,43.9)
-        bill_depth_mm = st.sidebar.slider('Bill depth (mm)', 13.1,21.5,17.2)
+        Proffesion Type = st.sidebar.selectbox('Proffesion Type',('Businessmen','Employee','Freelancer'))
+        
+        Monthly Earning_$ = st.sidebar.slider('Monthly Earning (mm)', 0,1000000)
+        Monthly Expense_$ = st.sidebar.slider('Bill depth (mm)', 13.1,21.5,17.2)
         flipper_length_mm = st.sidebar.slider('Flipper length (mm)', 172.0,231.0,201.0)
         body_mass_g = st.sidebar.slider('Body mass (g)', 2700.0,6300.0,4207.0)
         data = {'island': island,
