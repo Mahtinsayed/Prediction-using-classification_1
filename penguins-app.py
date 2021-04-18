@@ -25,8 +25,8 @@ else:
     def user_input_features():
         Proffesion Type = st.sidebar.selectbox('Proffesion Type',('Businessmen','Employee','Freelancer'))
         
-        Monthly Earning_$ = st.sidebar.slider('Monthly Earning (mm)', 0,1000000)
-        Monthly Expense_$ = st.sidebar.slider('Bill depth (mm)', 13.1,21.5,17.2)
+        Monthly Earning = st.sidebar.slider('Monthly Earning ', 0,1000000)
+        Monthly Expense = st.sidebar.slider('Monthly Expense ', 0,1000000)
         flipper_length_mm = st.sidebar.slider('Flipper length (mm)', 172.0,231.0,201.0)
         body_mass_g = st.sidebar.slider('Body mass (g)', 2700.0,6300.0,4207.0)
         data = {'island': island,
