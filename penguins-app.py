@@ -5,13 +5,12 @@ import pickle
 from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
-# Earning Prediction Calculator
+# Earning Prediction App
+This app predicts your earning with AI """)
 
-This calculator predicts your earning with Artfictial Intelligience """)
+st.sidebar.header('User Input Features')
 
 
-
-st.sidebar.header('User financial datas ')
 
 # Collects user input features into dataframe
 uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
@@ -19,11 +18,12 @@ if uploaded_file is not None:
     input_df = pd.read_csv(uploaded_file)
 else:
     def user_input_features():
-        Proffesion = st.sidebar.selectbox('Proffesion Type',('Businessmen','Employee','Freelancer'))
-          
-       Earning = st.sidebar.slider('Earning', 0,1000000)
-       Expense = st.sidebar.slider('Expense', 0,1000000)
-       
+        
+        
+        Earning = st.sidebar.slider('Earning', 0,1000000)
+        Expense = st.sidebar.slider('Expense', 0,1000000)
+        flipper_length_mm = st.sidebar.slider('Flipper length (mm)', 172.0,231.0,201.0)
+        body_mass_g = st.sidebar.slider('Body mass (g)', 2700.0,6300.0,4207.0)
         data = {'Earning': Earning,
                 'Expense': Expense}
                
@@ -52,7 +52,7 @@ st.subheader('User Input features')
 if uploaded_file is not None:
     st.write(df)
 else:
-    st.write('Upload up to 6 month financial datas to get more ccurate result. Currently using example input parameters (shown below).')
+    st.write(' To get more accurate prediction upload up to 6 months data. Currently using example input parameters (shown below).')
     st.write(df)
 
 
@@ -64,7 +64,7 @@ prediction_proba = load_clf.predict_proba(df)
 
 st.subheader('Prediction')
 
-st.write(Estimated_Savings[prediction])
+st.write(penguins_Savings[prediction])
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
