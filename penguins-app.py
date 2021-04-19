@@ -25,7 +25,7 @@ else:
        Expense = st.sidebar.slider('Expense', 0,1000000)
        
         data = {'Earning': Earning,
-                'Expense': Expense,}
+                'Expense': Expense}
                
         features = pd.DataFrame(data, index=[0])
         return features
@@ -39,7 +39,7 @@ df = pd.concat([input_df,penguins],axis=0)
 
 # Encoding of ordinal features
 # https://www.kaggle.com/pratik1120/penguin-dataset-eda-classification-and-clustering
-encode = ['Monthly Earning','Monthly Expense']
+encode = ['Earning','Expense']
 for col in encode:
     dummy = pd.get_dummies(df[col], prefix=col)
     df = pd.concat([df,dummy], axis=1)
