@@ -33,7 +33,7 @@ else:
 
 # Combines user input features with entire penguins dataset
 # This will be useful for the encoding phase
-penguins_raw = pd.read_csv('prediction_2.csv')
+penguins_raw = pd.read_csv('penguins_cleaned.csv')
 penguins = penguins_raw.drop(columns=['Savings'])
 df = pd.concat([input_df,penguins],axis=0)
 
@@ -55,8 +55,7 @@ else:
     st.write('Upload up to 6 month financial datas to get more ccurate result. Currently using example input parameters (shown below).')
     st.write(df)
 
-# Reads in saved classification model
-load_clf = pickle.load(open('penguins_clf.pkl', 'rb'))
+
 
 # Apply model to make predictions
 prediction = load_clf.predict(df)
