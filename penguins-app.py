@@ -20,12 +20,12 @@ if uploaded_file is not None:
 else:
     def user_input_features():
         Proffesion Type = st.sidebar.selectbox('Proffesion Type',('Businessmen','Employee','Freelancer'))
-        
-        Monthly Earning = st.sidebar.slider('Monthly Earning ', 0,1000000)
-        Monthly Expense = st.sidebar.slider('Monthly Expense ', 0,1000000)
+          
+        Monthly Earning = st.sidebar.slider('Monthly Earning', 0,1000000)
+        Monthly Expense = st.sidebar.slider('Monthly Expense', 0,1000000)
        
         data = {'Monthly Earning': Monthly Earning,
-                'Monthly Expense': Monthly Expense,
+                'Monthly Expense': Monthly Expense,}
                
         features = pd.DataFrame(data, index=[0])
         return features
