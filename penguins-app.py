@@ -19,13 +19,13 @@ if uploaded_file is not None:
     input_df = pd.read_csv(uploaded_file)
 else:
     def user_input_features():
-        Proffesion_Type = st.sidebar.selectbox('Proffesion Type',('Businessmen','Employee','Freelancer'))
+        Proffesion = st.sidebar.selectbox('Proffesion Type',('Businessmen','Employee','Freelancer'))
           
-        Monthly_Earning = st.sidebar.slider('Monthly Earning', 0,1000000)
-        Monthly_Expense = st.sidebar.slider('Monthly Expense', 0,1000000)
+       Earning = st.sidebar.slider('Earning', 0,1000000)
+       Expense = st.sidebar.slider('Expense', 0,1000000)
        
-        data = {'Monthly_Earning': Monthly Earning,
-                'Monthly_Expense': Monthly Expense,}
+        data = {'Earning': Earning,
+                'Expense': Expense,}
                
         features = pd.DataFrame(data, index=[0])
         return features
