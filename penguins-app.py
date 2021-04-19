@@ -24,8 +24,8 @@ else:
         Monthly_Earning = st.sidebar.slider('Monthly Earning', 0,1000000)
         Monthly_Expense = st.sidebar.slider('Monthly Expense', 0,1000000)
        
-        data = {'Monthly Earning': Monthly Earning,
-                'Monthly Expense': Monthly Expense,}
+        data = {'Monthly_Earning': Monthly Earning,
+                'Monthly_Expense': Monthly Expense,}
                
         features = pd.DataFrame(data, index=[0])
         return features
