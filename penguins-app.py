@@ -58,8 +58,8 @@ else:
 
 
 # Apply model to make predictions
-prediction = clf.predict(df)
-prediction_proba = clf.predict_proba(df)
+prediction = df.predict(df)
+prediction_proba = df.predict_proba(df)
 
 
 st.subheader('Prediction')
