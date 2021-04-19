@@ -54,6 +54,9 @@ else:
     st.write(' To get more accurate prediction upload up to 6 months data. Currently using example input parameters (shown below).')
     st.write(df)
 
+    
+# Reads in saved classification model
+load_clf = pickle.load(open('penguins_clf.pkl', 'rb'))
 
 
 # Apply model to make predictions
