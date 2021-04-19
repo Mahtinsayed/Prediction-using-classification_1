@@ -52,7 +52,7 @@ st.subheader('User Input features')
 if uploaded_file is not None:
     st.write(df)
 else:
-    st.write('Awaiting CSV file to be uploaded. Currently using example input parameters (shown below).')
+    st.write('Upload up to 6 month financial datas to get more ccurate result. Currently using example input parameters (shown below).')
     st.write(df)
 
 # Reads in saved classification model
@@ -64,7 +64,7 @@ prediction_proba = load_clf.predict_proba(df)
 
 
 st.subheader('Prediction')
-penguins_species = np.array(['Adelie','Chinstrap','Gentoo'])
+
 st.write(Estimated_Savings[prediction])
 
 st.subheader('Prediction Probability')
