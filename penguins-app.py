@@ -55,12 +55,10 @@ else:
     st.write(df)
 
     
-# Reads in saved classification model
-load_clf = pickle.load(open('penguins_clf.pkl', 'rb'))
 
 
 # Apply model to make predictions
-prediction = load_clf.predict(df)
+prediction = clf.predict(df)
 prediction_proba = load_clf.predict_proba(df)
 
 
