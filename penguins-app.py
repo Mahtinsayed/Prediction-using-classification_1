@@ -13,10 +13,6 @@ This calculator predicts your earning with Artfictial Intelligience
 
 st.sidebar.header('User financial datas ')
 
-st.sidebar.markdown("""
-[Example CSV input file](https://raw.githubusercontent.com/dataprofessor/data/master/penguins_example.csv)
-""")
-
 # Collects user input features into dataframe
 uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
 if uploaded_file is not None:
