@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 st.write("""
 # Earning Prediction Calculator
 
-This calculator predicts your earning with Artfictial Intelligience
+This calculator predicts your earning with Artfictial Intelligience """)
 
 
 
