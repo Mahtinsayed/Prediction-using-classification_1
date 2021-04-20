@@ -61,8 +61,8 @@ clf = pd.read_csv('penguins_cleaned.csv')
 clf = RandomForestClassifier()
 
 # Apply model to make predictions
-prediction = clf.predict_en(df)
-prediction_proba= clf.predict_en_proba(df)
+prediction = clf.predict(df)
+prediction_proba= clf.predict_proba(df)
 
 
 
