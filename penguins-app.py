@@ -45,14 +45,7 @@ for col in encode:
     del df[col]
 
 
-# Separating X and y
-X = df.drop('Savings', axis=1)
-Y = df['Savings']
 
-# Build random forest model
-from sklearn.ensemble import RandomForestClassifier
-clf = RandomForestClassifier()
-clf.fit(X, Y)
 
 # Displays the user input features
 st.subheader('User Input features')
