@@ -37,6 +37,14 @@ penguins_raw = pd.read_csv('penguins_cleaned.csv')
 penguins = penguins_raw.drop(columns=['Savings'])
 df = pd.concat([input_df,penguins],axis=0)
 
+# Encoding of ordinal features
+# https://www.kaggle.com/pratik1120/penguin-dataset-eda-classification-and-clustering
+encode = ['Earning','Expense']
+for col in encode:
+    dummy = pd.get_dummies(df[col], prefix=col)
+    df = pd.concat([df,dummy], axis=1)
+    del df[col]
+
 
 
 
