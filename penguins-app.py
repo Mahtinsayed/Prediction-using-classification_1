@@ -54,18 +54,18 @@ else:
     st.write(' To get more accurate prediction upload up to 6 months data. Currently using example input parameters (shown below).')
     st.write(df)
 
- # Reads in saved classification model
-load_clf = pickle.load(open('sparrowbean_clf.pkl', 'rb'))   
+  
 
 
 # Apply model to make predictions
-prediction = load_clf.predict(df)
-prediction_proba = load_clf.predict_proba(df)
+y_pred_en= clf_.predict(df)
+y_pred_en_proba= load_clf.predict_proba(df)
 
 
-st.subheader('Prediction')
 
-st.write(penguins_Savings[prediction])
+st.subheader('y_pred_en')
+
+st.write(penguins_Savings[y_pred_en])
 
 st.subheader('Prediction Probability')
-st.write(prediction_proba)
+st.write(y_pred_en_proba)
