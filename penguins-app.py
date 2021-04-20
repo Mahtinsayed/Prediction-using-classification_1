@@ -58,8 +58,8 @@ else:
 clf = pd.read_csv('penguins_cleaned.csv')
 
 # Apply model to make predictions
-prediction = clf.predict(df)
-prediction_proba= clf.predict_proba(df)
+prediction = clf.predict_en(df)
+prediction_proba= clf.predict_en_proba(df)
 
 
 
