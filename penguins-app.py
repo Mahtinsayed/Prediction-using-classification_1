@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 from sklearn.ensemble import RandomForestClassifier
+from sklearn import preprocessing
 
 st.write("""
 # Earning Prediction App
