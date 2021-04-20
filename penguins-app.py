@@ -43,7 +43,16 @@ for col in encode:
     dummy = pd.get_dummies(df[col], prefix=col)
     df = pd.concat([df,dummy], axis=1)
     del df[col]
-df = df[:1] # Selects only the first row (the user input data)
+
+
+# Separating X and y
+X = df.drop('Savings', axis=1)
+Y = df['Savings']
+
+# Build random forest model
+from sklearn.ensemble import RandomForestClassifier
+clf = RandomForestClassifier()
+clf.fit(X, Y)
 
 # Displays the user input features
 st.subheader('User Input features')
