@@ -67,8 +67,8 @@ y = df['Selector']
 clf.fit(df[features], df['Selector'])
 
 # Apply model to make predictions
-prediction = clf.predict(df)
-prediction_proba= clf.predict_proba(df)
+prediction = clf.predict(clf)
+prediction_proba= clf.predict_proba(clf)
 
 
 
