@@ -58,6 +58,7 @@ else:
 
   
 clf = pd.read_csv('penguins_cleaned.csv')
+clf = RandomForestClassifier()
 
 # Apply model to make predictions
 prediction = clf.predict_en(df)
