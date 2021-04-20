@@ -59,10 +59,11 @@ else:
   
 clf = pd.read_csv('penguins_cleaned.csv')
 clf = RandomForestClassifier()
+features = df.columns[1:2]
+selector = df.columns[:0]
 
-
-y = df['savings']
-clf.fit(train[features], train['savings'])
+y = train['Selector']
+clf.fit(train[features], train['Selector'])
 
 # Apply model to make predictions
 prediction = clf.predict(df)
