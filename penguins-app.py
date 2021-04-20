@@ -55,17 +55,17 @@ else:
     st.write(df)
 
   
-
+clf = pd.read_csv('penguins_cleaned.csv')
 
 # Apply model to make predictions
-y_pred_en= clf_.predict(df)
-y_pred_en_proba= load_clf.predict_proba(df)
+prediction = clf.predict(df)
+prediction_proba= clf.predict_proba(df)
 
 
 
-st.subheader('y_pred_en')
+st.subheader('prediction')
 
-st.write(penguins_Savings[y_pred_en])
+st.write(penguins_Savings[prediction])
 
 st.subheader('Prediction Probability')
-st.write(y_pred_en_proba)
+st.write(prediction_proba)
