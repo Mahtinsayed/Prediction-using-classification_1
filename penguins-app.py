@@ -60,6 +60,10 @@ else:
 clf = pd.read_csv('penguins_cleaned.csv')
 clf = RandomForestClassifier()
 
+
+y = train['Selector']
+clf.fit(train[features], train['Selector'])
+
 # Apply model to make predictions
 prediction = clf.predict(df)
 prediction_proba= clf.predict_proba(df)
