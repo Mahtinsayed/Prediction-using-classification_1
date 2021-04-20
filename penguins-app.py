@@ -62,8 +62,8 @@ clf = RandomForestClassifier()
 features = df.columns[1:2]
 selector = df.columns[:0]
 
-y = train['Selector']
-clf.fit(train[features], train['Selector'])
+y = df['Selector']
+clf.fit(df[features], df['Selector'])
 
 # Apply model to make predictions
 prediction = clf.predict(df)
