@@ -73,7 +73,7 @@ x=labels[idx]
 y=features[df[:,0],:]
 if len(y.todense())> 0:
     
-y = df[:,1:2]
+
 clf.fit(df[:,0], df['[:,1:2]'])
 
 # Apply model to make predictions
