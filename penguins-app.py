@@ -61,7 +61,7 @@ else:
   
 clf = pd.read_csv('penguins_cleaned.csv')
 clf = RandomForestClassifier()
-features = df.columns[:,1]
+features = df.columns[:,1:2:1]
 selector = df.columns[:,0]
 
 y = df['Selector']
