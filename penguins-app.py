@@ -64,13 +64,13 @@ clf = RandomForestClassifier()
 
 
 df = np.array(df)
-features = df[:,1:2]
-labels = df[:,0]
+features = df[:,0]
+labels = df[:,1:2]
 
 classes=np.unique(labels)
 idx=labels==classes[0]
-y=labels[idx]
-y=features[idx[:,0],:]
+x=labels[idx]
+y=features[df[:,0],:]
 
 y = df['labels']
 clf.fit(df[features], df['labels'])
