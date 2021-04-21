@@ -67,10 +67,11 @@ df = np.array(df)
 features = df[:,0]
 labels = df[:,1:2]
 
-classes=np.unique(labels)
+classes=np.array(labels)
 idx=labels==classes[0]
 x=labels[idx]
 y=features[df[:,0],:]
+array([], dtype=float64)
 
 y = df['labels']
 clf.fit(df[features], df['labels'])
