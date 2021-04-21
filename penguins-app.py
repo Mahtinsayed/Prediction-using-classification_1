@@ -63,17 +63,17 @@ clf = pd.read_csv('penguins_cleaned.csv')
 clf = RandomForestClassifier()
 
 
-User_Data = np.array(tdata)
-features = User_Data[:,1:2]
-labels = User_Data[:,0]
+df = np.array(df)
+features = df[:,1:2]
+labels = df[:,0]
 
 classes=np.unique(labels)
 idx=labels==classes[0]
-Yt=labels[idx]
-Xt=features[idx[:,0],:]
+y=labels[idx]
+y=features[idx[:,0],:]
 
-y = df['Selector']
-clf.fit(df[features], df['Selector'])
+y = df['labels']
+clf.fit(df[features], df['labels'])
 
 # Apply model to make predictions
 prediction = clf.predict(df)
