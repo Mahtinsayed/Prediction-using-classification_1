@@ -61,8 +61,16 @@ else:
   
 clf = pd.read_csv('penguins_cleaned.csv')
 clf = RandomForestClassifier()
-features = df.columns[:,1:2],:]
-selector = df.columns[:,0]
+
+
+User_Data = np.array(tdata)
+features = User_Data[:,1:2]
+labels = User_Data[:,0]
+
+classes=np.unique(labels)
+idx=labels==classes[0]
+Yt=labels[idx]
+Xt=features[idx[:,0],:]
 
 y = df['Selector']
 clf.fit(df[features], df['Selector'])
