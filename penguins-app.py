@@ -75,7 +75,8 @@ if len(y.todense())> 0:
     if len(x.todense())> 0:
     
   
-clf.fit(features[df[:,1:2:1],:], labels[df[:,0],:])
+y = train['Selector']
+clf.fit(train[features], train['Selector'])
 
 
 # Apply model to make predictions
