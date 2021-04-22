@@ -74,7 +74,7 @@ y=features[df[:,0],:]
 if len(y.todense())> 0:
     if len(x.todense())> 0:
     
-    y = data['features']
+    y = data_np.array['features']
 clf.fit(data[labels], data['features'])
 
 
