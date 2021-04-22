@@ -69,13 +69,13 @@ labels = df[:,1:2]
 
 classes=np.array(labels)
 idx=labels==classes[0]
-x=labels[df[:,1:2],:]
-y=features[df[:,0],:]
+x=labels[df[:,1:2:1],:]
+y=features[df[:,0:0],:]
 if len(y.todense())> 0:
     if len(x.todense())> 0:
     
-    y = labels[df[:,0],:]
-clf.fit(features[df[:,1:2],:], labels[df[:,0],:])
+    y = labels[df[:,0:0],:]
+clf.fit(features[df[:,1:2:1],:], labels[df[:,0],:])
 
 
 # Apply model to make predictions
