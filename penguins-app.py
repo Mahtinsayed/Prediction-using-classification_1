@@ -69,16 +69,18 @@ labels = data[:,1:2]
 
 classes=np.array(labels)
 idx=labels==classes[0]
-x=labels[idx]
+x=labels[df[:,1:2],:]
 y=features[df[:,0],:]
 if len(y.todense())> 0:
+    if len(x.todense())> 0:
     
-clf.fit(data['features'], data['labels'])
+    y = data['features']
+clf.fit(data[labels], data['features'])
 
 
 # Apply model to make predictions
-prediction = clf.predict(df)
-prediction_proba= clf.predict_proba(df)
+prediction = clf.predict(df[features])
+prediction_proba= clf.predict_proba(df[features])
 
 
 
