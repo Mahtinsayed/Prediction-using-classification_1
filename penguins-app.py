@@ -63,9 +63,9 @@ clf = pd.read_csv('penguins_cleaned.csv')
 clf = RandomForestClassifier()
 
 
-data = np.array(df)
-features = data[:,0]
-labels = data[:,1:2]
+df = np.array(df)
+features = df[:,0]
+labels = df[:,1:2]
 
 classes=np.array(labels)
 idx=labels==classes[0]
